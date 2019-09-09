@@ -31,6 +31,8 @@ To POST an account only balance is required (eg. `{"balance": 100}`). The accoun
 
 To POST a transfer IDs of two created accounts will be needed (eg. `{"senderId": 1, "recipientId": 2, "amount": 500}`).
 
+A RESTful API shouldn't have "actions", so I treat transfers as resources.
+
 **Tests**
 
 To demonstrate that the API works as expected there is `MoneyAppTest.java` test class
@@ -38,7 +40,7 @@ which starts the server and tests the REST endpoints using Apache HTTP Client.
 
 To start this test run: `mvn clean test -Dtest=MoneyAppTest`
 
-Default port of the test server is 9090 configured in `MoneyAppTest.java`
+Default port of the test server is 9080 configured in `MoneyAppTest.java`
 in `private static final int PORT = 9080;` field.
 
 In `test/kotlin` directory there are unit tests written in Kotlin.
