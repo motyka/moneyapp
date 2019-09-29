@@ -66,6 +66,10 @@ public class TransferService {
             throw new ConstrainViolationException("Sender's ID can't be null");
         }
 
+        if (transfer.getSenderId().equals(transfer.getRecipientId())) {
+            throw new ConstrainViolationException("Sender's and Recipient's IDs must be different");
+        }
+
         BigDecimal amount = transfer.getAmount();
         if (Objects.isNull(amount) || BigDecimal.ZERO.compareTo(amount) > 0) {
             throw new ConstrainViolationException("Amount must be greater than 0");
