@@ -53,7 +53,7 @@ All tests can be run with `mvn clean test`.
 **Concurrency**
 
 The API will be called in concurrently by multiple services.
-The part transferring money between accosts obviously needs proper synchronization.
+The part transferring money between accounts obviously needs proper synchronization.
 It could be done in code, using Java concurrency capabilities,
 but then the app wouldn't be safe to run on multiple servers,
 because this synchronization would only work locally.
