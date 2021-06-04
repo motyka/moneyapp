@@ -20,7 +20,7 @@
         <junit.version>5.5.1</junit.version>
         <mockito.version>3.0.0</mockito.version>
         <mockk.version>1.9.3</mockk.version>
-        <httpclient.version>4.5.9</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <swagger-core.version>2.0.8</swagger-core.version>
         <swagger-ui.version>3.22.2</swagger-ui.version>
     </properties>
